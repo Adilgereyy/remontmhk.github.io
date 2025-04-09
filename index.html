@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор Ремонта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор стоимости услуг</h1>
+
+        <!-- Форма для расчёта стоимости -->
+        <form id="calcForm">
+            <label for="service">Выберите услугу:</label>
+            <select id="service" name="service">
+                <option value="whitewash">Побелка стен</option>
+                <option value="paint_ceiling">Покраска потолка</option>
+                <option value="tile_floor">Плитка на пол</option>
+                <option value="wallpaper">Обои</option>
+            </select>
+
+            <label for="area">Введите площадь (м²):</label>
+            <input type="number" id="area" name="area" step="" required>
+
+            <button type="submit">Рассчитать</button>
+        </form>
+
+        <!-- Блок для отображения результатов -->
+        <div id="result" style="display: none;">
+            <h2>Результат расчёта:</h2>
+            <p id="serviceName"></p>
+            <p id="totalPrice"></p>
+        </div>
+
+        <h2>Доступные цены</h2>
+        <div id="pricesList"></div>
+
+        <!-- Уведомление о примерных ценах -->
+        <div id="disclaimer" class="disclaimer" style="display: none;">
+            Цены, указанные на сайте, являются примерными и основаны на расчетах для стандартных условий. 
+            Для получения точной стоимости, пожалуйста, уточняйте актуальные расценки
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
